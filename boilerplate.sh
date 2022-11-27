@@ -11,7 +11,7 @@ cat << EOF
 # Use:
 
 help() {
-    echo -e "\e[36m### help: $(basename ./boilerplate.sh) [-abcd] ###\e[0m"
+    echo -e "\e[36m### help: \$(basename \$0) [-abcd] ###\e[0m"
     echo '    -a shows a in the output'
     echo '    -b shows b in the output'
     echo '    -c shows c in the output'
