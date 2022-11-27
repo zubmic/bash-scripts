@@ -11,7 +11,7 @@ cat << EOF
 # Use:
 
 help() {
-    echo -e "\e[36m### help: \$(basename \$0) [-abcd] ###\e[0m"
+    echo -e "\e[36m### Help: \$(basename \$0) [-abcd] ###\e[0m"
     echo '    -a shows a in the output'
     echo '    -b shows b in the output'
     echo '    -c shows c in the output'
@@ -36,8 +36,7 @@ while getopts \${optstring} arg; do
     d) echo "Option 'd' was called" ;;
 
     ?)
-      echo "Invalid option: -\${OPTARG}."
-      echo
+      echo -e "\e[31m### Invalid option used: -\${OPTARG} ###\e[0m"
       help
       ;;
   esac
